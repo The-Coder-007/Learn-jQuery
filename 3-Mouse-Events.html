@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+        background-color: pink;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+</style>
+<body>
+    
+    <div id="box" class="test">
+        <h1>Test Box</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat voluptate voluptatem quia deserunt a praesentium eum!
+        </p>
+    </div>
+
+<script src="js/jQuery.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $("#box").click(function(){
+            $('#box').css("background-color", "green");
+
+            // var a = $("#box").html();
+            // console.log(a);
+        });
+
+        $("#box").dblclick(function(){ // double click
+            $('#box').css("background-color", "orange");
+
+            // var a = $("#box").html();
+            // console.log(a);
+        });
+
+        $("#box").contextmenu(function(){ // rightClick
+            $('#box').css("background-color", "blue");
+
+            // var a = $("#box").html();
+            // console.log(a);
+        });
+
+        $("#box").mouseenter(function(){ 
+            $('#box').css("background-color", "red");
+
+            // var a = $("#box").html();
+            // console.log(a);
+        });
+
+        $("#box").mouseleave(function(){ 
+            $('#box').css("background-color", "purple");
+
+            // var a = $("#box").html();
+            // console.log(a);
+        });
+
+        
+
+    });
+</script>
+</body>
+</html>

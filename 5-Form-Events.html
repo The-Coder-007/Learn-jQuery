@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #sform{
+        background-color: pink;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+</style>
+<body>
+    <h5>
+        There are Five types of events in forms :
+        1 - focus()  --- when we focus in input box
+        2 - blur() --- when we change focus on the input box
+        3 - change() --- we use it in select box - when we change in select its fire
+        4 - Select() --- when we select the input box
+        5 - Submit() --- when we submit 
+
+    </h5>
+
+   <form action="" id="sform">
+    <label for="">Name</label>
+    <input type="text" name="" id="sname">
+
+    <label for="">Class</label>
+    <input type="text" name="" id="sclass">
+
+    <label for="">Country</label>
+    <select name="" id="scountry">
+        <option value="India">India</option>
+        <option value="China">China</option>
+        <option value="USA">USA</option>
+        <option value="Sri Lanka">Sri Lanka</option>
+    </select>
+
+    <br><br>
+    <input type="submit">
+   </form>
+
+   <div id="test" style="border:1px solid red; margin-top: 20px;"></div>
+
+<script src="js/jQuery.js"></script>
+<script src="js/5-Form-Events.js"></script>
+
+</body>
+</html>

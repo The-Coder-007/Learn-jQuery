@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Syntex jQuery</title>
+    <script src="js/jQuery.js"></script>
+</head>
+<body>
+    
+    <div id="test1">
+        <h1>Test Box 1</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maiores libero maxime?
+        </p>
+    </div>
+    <div id="test2">
+        <h1>Test Box 2</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maiores libero maxime?
+        </p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            
+            // console.log("Hello");
+            var a = $('#test1').html();
+            console.log(a);
+
+            var b = $('#test2').html();
+            console.log(b);
+
+        });
+    </script>
+</body>
+</html>

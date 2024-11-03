@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+        background-color: pink;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+</style>
+<body>
+    <h5>
+        There are three types of events in keyboard :
+        1 - keypress()
+        2 - keydown()
+        3 - keyup()
+    </h5>
+
+    <div id="box">
+        <h1>Test Box</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat voluptate voluptatem quia deserunt a praesentium eum!
+        </p>
+    </div>
+
+<script src="js/jQuery.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $("#box").click(function(){
+           
+            $("body").keypress(function(){ // When we press the key events fire after that 
+                // $("body")
+                $(this).css("background-color", "orange");
+            });
+
+            $("body").keydown(function(){ // Press the key events fire untill left the key
+                // $("body")
+                $(this).css("background-color", "green");
+            });
+
+            $("body").keyup(function(){ // Press the key events fire untill left the key
+                // $("body")
+                $(this).css("background-color", "green");
+            });
+
+        });
+
+       
+
+    });
+</script>
+</body>
+</html>

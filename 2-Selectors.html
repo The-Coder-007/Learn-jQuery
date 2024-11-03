@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in jQuery</title>
+    <script src="js/jQuery.js"></script>
+</head>
+<body>
+    
+    <div id="box" class="test">
+        <h1>Test Box 1</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maiores libero maxime?
+        </p>
+    </div>
+
+    <ul id="list">
+        <li>Orange</li>
+        <li class="test">Banana</li>
+        <li>Grapes</li>
+        <li class="test">Apple</li>
+        <li>Guava</li>
+    </ul>
+   
+    <!-- Select by ID : $("#idname");
+    Select by Class Name : $(".className");
+    Select by Tag Name : $("tagName") ----/> $("p") = all paragraph select
+
+
+    $("*") --/> All selectors from file
+    $("ul li") ---/> ul of li 
+    $(".abc, .cdf") ---/> Multiple className
+    $("h1, div, p") ---/> multi tags
+    $("p:first") ---/> entire page select first one
+    $("p:last") ---/> entire page select last one
+    $("p:even") ---/> entire page select even one
+    $("p:odd") ---/> entire page select odd one -->
+
+
+
+    <script>
+        $(document).ready(function(){
+            
+        // $("#list").css("color", "red");
+
+        // $(".test").css("border", "2px solid red");
+
+        // $("*").css("border", "2px solid red");
+                        // property, value 
+        
+        // $("li:first").css("border", "2px solid red"); 
+
+        // $("li:first-child").css("border", "2px solid red"); //first ul of li
+
+        // $("ul li:eq(3)").css("border", "2px solid red"); //Equation
+
+        // $("ul li:gt(2)").css("border", "2px solid red"); //greater than
+        
+        $("ul li:lt(3)").css("border", "2px solid red"); //lower than
+
+        
+        });
+    </script>
+</body>
+</html>
