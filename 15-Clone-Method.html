@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Method in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+       background-color: pink;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+    #box2{
+       background-color: rgb(159, 64, 80);
+        padding: 10px;
+        border: 1px solid #000;
+    }
+
+   .backbg{
+    color: green;
+   }
+
+</style>
+<body>
+    <p>
+       if you have a div with headin with paragraph <br>
+       and you have another div empty <br>
+       using this we can fill the empty div value of first div
+    </p>
+ 
+
+    <div id="box">
+        <h2>jQuery GET Methods</h2>
+        <p>Lorem ipsum <span>dolor sit, amet consectetu</span>r adipisicing elit. Autem neque perspiciatis tempore.</p>
+    </div>
+    <br>
+    <br>
+    <div id="box2">
+        <p>This is another div</p>
+    </div>
+
+   
+
+    <button id="cloneBtn">Clone</button>
+
+<script src="js/jQuery.js"></script>
+
+<script>
+    $(function(){
+        $('#cloneBtn').click(function(){
+            $("#box h2").clone().prependTo('#box2');
+            $("#box p").clone().appendTo('#box2');
+        })
+    })
+</script>
+</body>
+</html>

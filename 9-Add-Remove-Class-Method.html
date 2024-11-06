@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Remove Class Method in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+       
+        padding: 10px;
+        border: 1px solid #000;
+    }
+
+    .first{
+        background-color: rgb(224, 127, 0);
+    }
+
+    .second{
+        background-color: green;
+    }
+    .red{
+        color: red;
+    }
+</style>
+<body>
+    <h2>
+        1 - addClass()
+        2 - removeClass()
+        3 - toggleClass() -- add and remove according to the class 
+    </h2>
+
+    <div id="box">
+        <h2>jQuery GET Methods</h2>
+        <p>Lorem ipsum <span>dolor sit, amet consectetu</span>r adipisicing elit. Autem neque perspiciatis tempore.</p>
+    </div>
+
+    <button id="addbutton">Add Class</button>
+    <button id="removebutton">Remove Class</button>
+    <button id="togglebutton">Toggle Class</button>
+
+    <script src="js/jQuery.js"></script>
+    <script>
+      
+            $("#addbutton").click(function(){
+                // $("#box").addClass("first");
+
+                // $("#box").addClass("first second");
+                
+                $("#box, h2").addClass("second");
+            })
+
+            $("#removebutton").click(function(){
+                // $("#box").removeClass("first");
+
+                // $("#box").removeClass("first second");
+
+                $("#box, h2").removeClass("second");
+            })
+            $("#togglebutton").click(function(){
+                // $("#box, h2").removeClass("first");
+
+                // $("#box").removeClass("first second");
+
+                $("#box").toggleClass("second");
+            })
+       
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplaceAll and replacewith Method in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+       background-color: pink;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+   
+
+
+
+</style>
+<body>
+    <p>
+        1 - replaceWith();
+        <br>
+       if you have a div with three diff paragraph <br>
+       and you want to change any paragraph tag with any other tag <br>
+       then you can use replaceWith() Method
+        2 - replaceAll();
+        <br>
+       If you want to change all three paragraph tag to another tag
+       <br>
+       you can use replaceAll() Method
+    </p>
+ 
+
+    <div id="box">
+        <h1>Text Box</h1>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui quidem quod alias.</p>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui quidem quod alias.</p>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui quidem quod alias.</p>
+    </div>
+
+   
+
+    <button id="replaceAllBtn">replaceAll</button>
+    <!-- <button id="replaceWithBtn">replaceWith</button> -->
+
+<script src="js/jQuery.js"></script>
+
+<script>
+    $(function(){
+        // $('#replaceWithBtn').click(function(){
+        //    $('#box p:first').replaceWith("<h1>Yahoo BaBa!</h1>");
+        //    $('#box p:nth-child(3)').replaceWith("<span>Yahoo BaBa!</span>");
+        // })
+
+        $('#replaceAllBtn').click(function(){
+         
+            $("<h2>Hello World! replace All</h2>").replaceAll("#box p:first");
+
+        })
+    })
+</script>
+</body>
+</html>

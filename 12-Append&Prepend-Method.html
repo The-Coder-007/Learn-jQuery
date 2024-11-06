@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append and Preppend Methods in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+       background-color: pink;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+
+   .backbg{
+    color: green;
+   }
+
+</style>
+<body>
+
+   
+
+    <!-- <div id="box">
+        <h2>jQuery GET Methods</h2>
+        <p>Lorem ipsum <span>dolor sit, amet consectetu</span>r adipisicing elit. Autem neque perspiciatis tempore.</p>
+    </div> -->
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ol>
+
+    <button id="appendBtn">Append</button>
+    <button id="prependBtn">Prepend</button>
+
+<script src="js/jQuery.js"></script>
+
+<script>
+    $(function(){
+        $("#appendBtn").click(function(){
+            $("ol").append("<li>Item New Append</li>")
+        })
+        $("#prependBtn").click(function(){
+            $("ol").prepend("<li>Item New Prepend</li>")
+        })
+
+        
+        $("#appendBtn").click(function(){
+            $("#box").append("<h2>Hello Word append!</h2>")
+        })
+        $("#prependBtn").click(function(){
+            $("#box").prepend("<h2>Hello Word prepend!</h2>")
+        })
+    })
+</script>
+</body>
+</html>

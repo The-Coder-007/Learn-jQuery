@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty and Remove Methods in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+       background-color: pink;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+
+   .backbg{
+    color: green;
+   }
+
+</style>
+<body>
+    <p>
+       
+      
+       1 -  appendTo() -- add data's in the end down
+       <br>
+       2 -  prependTo() -- add datas from the beginning top
+    </p>
+ 
+
+    <div id="box">
+        <h2>jQuery GET Methods</h2>
+        <p>Lorem ipsum <span>dolor sit, amet consectetu</span>r adipisicing elit. Autem neque perspiciatis tempore.</p>
+    </div>
+
+   
+
+    <button id="appendtoBtn">AppendTo</button>
+    <button id="prependtoBtn">PrependTo</button>
+
+<script src="js/jQuery.js"></script>
+
+<script>
+    $(function(){
+        $('#appendtoBtn').click(function(){
+            $("<h3> Appendto New value!</h3>").appendTo('#box');
+        })
+
+        $('#prependtoBtn').click(function(){
+            $("<h3> Prependto New value!</h3>").prependTo('#box');
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Off Methods in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+       background-color: pink;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+
+   .backbg{
+    color: green;
+   }
+
+</style>
+<body>
+
+    <h1>
+        On() -- For using multiple events in single id
+        $('#abc').on({
+            click:function(){
+
+            },
+
+            mouseenter:function(){
+
+            }
+        })
+
+        off() --- if we using multiple events to remove use this
+
+    </h1>
+
+    <div id="box">
+        <h2>jQuery GET Methods</h2>
+        <p>Lorem ipsum <span>dolor sit, amet consectetu</span>r adipisicing elit. Autem neque perspiciatis tempore.</p>
+    </div>
+
+    <button>remove</button>
+
+<script src="js/jQuery.js"></script>
+<script>
+    $(function(){
+       
+        // $('#box').on("click", function(){
+        //     $(this).css("background", "orange")
+        // });
+
+        // $('#box').on("mouseover mouseout", function(){
+        //     $(this).toggleClass("backbg")
+        // });
+
+        $("#box").on({
+            "click" : function(){
+                $(this).css("background", "orange")
+            },
+            "mouseover" : function(){
+                $(this).css("background", "lime")
+            },
+            "mouseout" : function(){
+                $(this).css("background", "lightblue")
+            }
+        });
+
+        $("button").click(function(){
+            $("#box").off("mouseover mouseout");
+        })
+    });
+</script>
+</body>
+</html>

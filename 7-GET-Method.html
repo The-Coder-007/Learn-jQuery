@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET Method in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+        background: pink;
+        padding: 10px;
+        border: 1px solid #000;
+    }
+</style>
+<body>
+    
+<h1>
+    To Get the value in HTML 
+    1 - text()
+    2 - html()
+    3 - attr()
+    4 - val()
+</h1>
+
+
+<div id="box" class="text abc">
+    <h2>jQuery GET Methods</h2>
+    <p>Lorem ipsum <span>dolor sit, amet</span> consectetur adipisicing elit. Autem neque perspiciatis tempore.</p>
+</div>
+
+<script src="js/jQuery.js"></script>
+<script>
+    $(function(){
+        // html method
+        var a = $("#box").html();
+        console.log(a);
+
+        // text
+        var b = $("#box").text();
+        console.log(b);
+
+        // attribute
+        var c = $("#box").attr('class');
+        console.log(c);
+
+    })
+</script>
+</body>
+</html>

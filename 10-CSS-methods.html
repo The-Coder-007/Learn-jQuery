@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Methods in jQuery</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #box{
+       
+        padding: 10px;
+        border: 1px solid #000;
+    }
+
+   
+
+</style>
+<body>
+    <div id="box">
+        <h2>jQuery GET Methods</h2>
+        <p>Lorem ipsum <span>dolor sit, amet consectetu</span>r adipisicing elit. Autem neque perspiciatis tempore.</p>
+    </div>
+
+    <button id="stylebutton">Add Style</button>
+
+<script src="js/jQuery.js"></script>
+<script>
+    $(function(){
+        $("#stylebutton").click(function(){
+            // $("#box").css("background", "pink");
+            // for multiple value
+            $("#box").css({"background" : "pink", "color" : "red", "border" : "3px dotted green"});
+
+        });
+    });
+</script>
+</body>
+</html>
